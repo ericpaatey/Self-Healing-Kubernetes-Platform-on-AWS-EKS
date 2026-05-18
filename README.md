@@ -2,7 +2,7 @@
 
 ### Overview
 
-This project demonstrates a production-style self-healing Kubernetes infrastructure platform on AWS.
+This project demonstrates a production-grade self-healing Kubernetes infrastructure platform on AWS.
 
 The platform automatically:
 
