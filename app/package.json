@@ -1,0 +1,12 @@
+{
+  "name": "eks-self-healing-app",
+  "version": "1.0.0",
+  "description": "Self-healing Kubernetes application on AWS EKS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

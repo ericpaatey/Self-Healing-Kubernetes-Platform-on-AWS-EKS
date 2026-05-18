@@ -1,0 +1,27 @@
+alertmanager:
+  enabled: true
+
+grafana:
+  enabled: true
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+additionalPrometheusRulesMap:
+  kubernetes-alerts:
+    groups:
+      - name: kubernetes.rules
+
+        rules:
+          - alert: HighPodRestarts
+
+            expr: increase(kube_pod_container_status_restarts_total[5m]) > 5
+
+            for: 2m
+
+            labels:
+              severity: critical
+
+            annotations:
+              summary: Pod restart threshold exceeded
